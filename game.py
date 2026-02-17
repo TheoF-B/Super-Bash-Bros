@@ -2,6 +2,8 @@ import simplegui, math, random
 ghostSprites = simplegui.load_image('https://github.com/TheoF-B/Super-Bash-Bros/blob/main/assets/Ghost%20Sheet.png?raw=true')
 brawlerSprites = simplegui.load_image('https://github.com/TheoF-B/Super-Bash-Bros/blob/main/assets/Brawler%20Sheet.png?raw=true')
 swordieSprites = simplegui.load_image('https://github.com/TheoF-B/Super-Bash-Bros/blob/main/assets/Swordfighter%20Sheet.png?raw=true')
+stage = simplegui.load_image('https://github.com/TheoF-B/Super-Bash-Bros/blob/main/assets/Stage.png?raw=true')
+titleScreen = simplegui.load_image('https://github.com/TheoF-B/Super-Bash-Bros/blob/main/assets/Title%20Screen.png?raw=true')
 # The Vector class
 class Vector:
 
@@ -703,7 +705,7 @@ class Game1P:
         self.character = character
         self.moveset = moveset
         self.clock = Clock(0)
-        self.stage = simplegui.load_image('https://github.com/TheoF-B/Super-Bash-Bros/blob/main/assets/Stage.png?raw=true')
+        self.stage = stage
         self.floors = [PlatformBox(Vector(130, 310), 540, 20, False), PlatformBox(Vector(180, 220), 70, 3, True),
         PlatformBox(Vector(550, 220), 70, 3, True)]
         self.walls = [WallBox([Vector(135,500), Vector(135,320)], 10, Vector(1, 0)), WallBox([Vector(665,500), Vector(665,320)], 10, Vector(-1, 0))]
@@ -805,7 +807,7 @@ class Game2P:
         self.player2 = player2
         self.moveset = moveset
         self.clock = Clock(0)
-        self.stage = simplegui.load_image('https://github.com/TheoF-B/Super-Bash-Bros/blob/main/assets/Stage.png?raw=true')
+        self.stage = stage
         self.floors = [PlatformBox(Vector(130, 310), 540, 20, False), PlatformBox(Vector(180, 220), 70, 3, True),
         PlatformBox(Vector(550, 220), 70, 3, True)]
         self.walls = [WallBox([Vector(135,500), Vector(135,320)], 10, Vector(1, 0)), WallBox([Vector(665,500), Vector(665,320)], 10, Vector(-1, 0))] 
@@ -948,7 +950,7 @@ class Menu:
         self.in1P = False
         self.in2P = False
         self.menuNumber = 1
-        self.menu1Image = simplegui.load_image('https://github.com/TheoF-B/Super-Bash-Bros/blob/main/assets/Title%20Screen.png?raw=true')
+        self.menu1Image = titleScreen
     
     def draw(self, canvas):
         
